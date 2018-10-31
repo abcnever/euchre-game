@@ -2,20 +2,12 @@
 
 ## Requirements
 
-This app requires the newest version of docker installed as of the writing of this README, June 6, 2018.
-
-## Installation
-
-To build the docker app:
-
-```
-docker build -t euchre_game .
-```
+This app requires the newest version of docker and docker-compose installed as of the writing of this README, October 31, 2018.
 
 ## Execution / Run
 
 ```
-docker run -p 5000:5000 euchre_game
+docker-compose up
 ```
 
 The app will be then available in your browser @ `http://localhost:5000`

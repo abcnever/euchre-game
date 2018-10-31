@@ -1,0 +1,25 @@
+version: "3"
+services:
+
+  db:
+    image: postgres:10
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    networks:
+      - backend
+
+  euchre-game: 
+    build: .
+    networks:
+      - backend
+    volumes: 
+      - .:/euchre_game
+    ports: 
+      - "5000:5000"
+
+networks:
+  frontend: 
+  backend:
+
+volumes:
+  db-data: 
