@@ -11,6 +11,4 @@ RUN pip install -r requirements.txt
 ENV FLASK_APP __init__.py
 ENV FLASK_DEBUG 1
 
-COPY . .
-
 CMD ["python", "-u", "-m", "flask", "run", "-h", "0.0.0.0", "-p", "5000"]
