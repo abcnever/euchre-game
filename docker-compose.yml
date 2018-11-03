@@ -20,6 +20,8 @@ services:
       - "5000:5000"
     stdin_open: true
     tty: true
+    environment:
+      - DATABASE_URL=postgres://euchre:euchre@db:5432/euchre
 
 networks:
   frontend: 
