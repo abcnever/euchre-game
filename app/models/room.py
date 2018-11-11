@@ -1,10 +1,8 @@
 from sqlalchemy import Column, Integer
 
-from .base import Base
+from .. import db
 
-class Room(Base):
-    __tablename__ = 'users'
-
+class Room(db.Model):
     id = Column(Integer, primary_key=True)
 
     def __repr__(self):
