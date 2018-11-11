@@ -1,10 +1,7 @@
-from sqlalchemy import Column, ForeignKey, Integer
-from sqlalchemy.orm import relationship
-
-from .. import db
+from . import db
 
 class CardHandJoin(db.Model):
-    id = Column(Integer, nullable=False, primary_key=True)
+    id = db.Column(db.Integer, nullable=False, primary_key=True)
 
-    card_id = Column(Integer, ForeignKey('cards.id', ondelete='CASCADE'), nullable=False)
-    hand_id = Column(Integer, ForeignKey('hands.id', ondelete='CASCADE'), nullable=False)
+    card_id = db.Column(db.Integer, db.ForeignKey('cards.id', ondelete='CASCADE'), nullable=False)
+    hand_id = db.Column(db.Integer, db.ForeignKey('hands.id', ondelete='CASCADE'), nullable=False)
