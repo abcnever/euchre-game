@@ -6,6 +6,7 @@ from euchre-game.app.models.columns import Suit
 class Card(Base):
     __tablename__ = "cards"
 
-    id = Column(Integer, nullable=False)
+    id = Column(Integer, nullable=False, primary_key=True)
+
     name = Column(String, nullable=False)
     suit = Column(Suit, nullable=False)
