@@ -1,6 +1,8 @@
-from sqlalchemy import Column, String, Integer 
+from sqlalchemy import Column, String, Integer
 
-from euchre-game.app.models.columns import Suit
+from .base import Base
+
+from .columns.suit import Suit
 
 class Card(Base):
     __tablename__ = "cards"
