@@ -9,6 +9,3 @@ class Card(Base):
     id = Column(Integer, nullable=False)
     name = Column(String, nullable=False)
     suit = Column(Suit, nullable=False)
-
-    hand_id = Column(Integer, ForeignKey('hands.id', ondelete='CASCADE'), nullable=True)
-    hand = relationship('hands', back_populates='cards')
