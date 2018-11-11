@@ -1,12 +1,9 @@
 from sqlalchemy import Column, String, Integer
 
-from .base import Base
-
+from .. import db
 from .columns.suit import Suit
 
-class Card(Base):
-    __tablename__ = "cards"
-
+class Card(db.Model):
     id = Column(Integer, nullable=False)
     name = Column(String, nullable=False)
     suit = Column(Suit, nullable=False)
