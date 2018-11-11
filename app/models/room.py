@@ -1,5 +1,7 @@
 from sqlalchemy import Column, Integer
 
+from .base import Base
+
 class Room(Base):
     __tablename__ = 'users'
 
