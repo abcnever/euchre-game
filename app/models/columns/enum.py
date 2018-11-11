@@ -1,6 +1,6 @@
 from sqlalchemy import types
 
-class EnumColumn(types.TypeDecorator)
+class EnumColumn(types.TypeDecorator):
     impl = types.String
 
     def process_bind_param(self, value, engine):

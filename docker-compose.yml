@@ -10,13 +10,15 @@ services:
       - POSTGRES_USER=euchre
       - POSTGRES_PASSWORD=euchre
       - POSTGRES_DB=euchre
-  euchre-game: 
+    ports:
+      - "5432:5432"
+  euchre-game:
     build: .
     networks:
       - backend
-    volumes: 
+    volumes:
       - .:/euchre_game
-    ports: 
+    ports:
       - "5000:5000"
     stdin_open: true
     tty: true
@@ -24,8 +26,8 @@ services:
       - DATABASE_URL=postgres://euchre:euchre@db:5432/euchre
 
 networks:
-  frontend: 
+  frontend:
   backend:
 
 volumes:
-  db-data: 
+  db-data:
