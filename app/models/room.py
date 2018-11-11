@@ -1,8 +1,8 @@
 from sqlalchemy import Column, Integer
 
-class Room(Base):
-    __tablename__ = 'users'
+from .. import db
 
+class Room(db.Model):
     id = Column(Integer, primary_key=True)
 
     def __repr__(self):
