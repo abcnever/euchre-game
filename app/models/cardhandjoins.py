@@ -1,11 +1,9 @@
 from sqlalchemy import Column, ForeignKey, Integer
 from sqlalchemy.orm import relationship
 
-from . import Base
+from .. import db
 
-class CardHandJoin(Base):
-    __tablename__ = "cardhandjoins"
-
+class CardHandJoin(db.Model):
     id = Column(Integer, nullable=False, primary_key=True)
 
     card_id = Column(Integer, ForeignKey('cards.id', ondelete='CASCADE'), nullable=False)
