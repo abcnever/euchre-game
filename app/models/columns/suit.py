@@ -3,8 +3,6 @@ import enum
 
 from .enum import EnumColumn
 
-from collections import namedtuple
-
 class Suit(EnumColumn):
     class Enum(enum.Enum):
 
