@@ -2,8 +2,7 @@ from flask import Flask
 from flask_cors import CORS
 import os
 from flask_migrate import Migrate
-from app.models import db
-from app.models import * # NOQA
+from flask_sqlalchemy import SQLAlchemy
 
 from app.routes import routes
 
@@ -22,4 +21,4 @@ migrate = Migrate(app, db, directory="./app/db/migrations")
 app.register_blueprint(routes)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, extra_files=['./routes/*', './templates/*'])
