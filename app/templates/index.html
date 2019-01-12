@@ -1,1 +1,7 @@
-test
+<!doctype html>
+<title>Index Page!</title>
+{% if room %}
+    <p>Room id is {{ room.id }}.</p>
+{% else %}
+    <p>No room :(</p>
+{% endif %}
