@@ -1,10 +1,8 @@
-from sqlalchemy import Column, String, Integer
-
-from .. import db
+from . import db
 from .columns.suit import Suit
+from .columns.card_name import CardName
 
 class Card(db.Model):
-    id = Column(Integer, nullable=False, primary_key=True)
-
-    name = Column(String, nullable=False)
-    suit = Column(Suit, nullable=False)
+    id = db.Column(db.Integer, nullable=False, primary_key=True, autoincrement=True)
+    name = db.Column(CardName, nullable=False)
+    suit = db.Column(Suit, nullable=False)
