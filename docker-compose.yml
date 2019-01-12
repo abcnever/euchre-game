@@ -11,7 +11,7 @@ services:
       - POSTGRES_PASSWORD=euchre
       - POSTGRES_DB=euchre
     ports:
-      - "5432:5432"
+      - "5001:5432"
   euchre-game:
     build: .
     networks:
