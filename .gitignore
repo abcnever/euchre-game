@@ -2,6 +2,8 @@
 __pycache__/
 *.py[cod]
 *$py.class
+bin/*
+include/*
 
 # C extensions
 *.so
@@ -24,6 +26,7 @@ wheels/
 .installed.cfg
 *.egg
 MANIFEST
+
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
@@ -104,3 +107,4 @@ venv.bak/
 .mypy_cache/
 
 .vscode/*
+pip-selfcheck.json
