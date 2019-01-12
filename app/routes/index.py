@@ -1,9 +1,13 @@
 from . import routes
-from flask import Flask, request, jsonify, make_response, render_template
+from flask import render_template
 
 @routes.route('/', methods=['GET', 'POST'])
 def index():
     return render_template("index.html")
+
+@routes.route('/rooms', method=['POST'])
+def create_room():
+    return
 
 # HTTP Errors handlers
 @routes.errorhandler(404)
