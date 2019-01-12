@@ -23,7 +23,10 @@ services:
     stdin_open: true
     tty: true
     environment:
-      - DATABASE_URL=postgres://euchre:euchre@db:5432/euchre
+      DATABASE_URL: postgres://euchre:euchre@db:5432/euchre
+      FLASK_DEBUG: 1
+      FLASK_ENV: development
+      FLASK_APP: app/__init__.py
 
 networks:
   frontend:

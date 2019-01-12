@@ -1,19 +1,18 @@
-from app import app
+from . import routes
 from flask import Flask, request, jsonify, make_response, render_template
 
-
-@app.route('/')
+@routes.route('/', methods=['GET', 'POST'])
 def index():
     return render_template("index.html")
 
 # HTTP Errors handlers
-@app.errorhandler(404)
+@routes.errorhandler(404)
 def url_error(e):
     return """
     Wrong URL!
     <pre>{}</pre>""".format(e), 404
 
-@app.errorhandler(500)
+@routes.errorhandler(500)
 def server_error(e):
     return """
     An internal error occurred: <pre>{}</pre>

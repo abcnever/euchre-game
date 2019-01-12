@@ -2,8 +2,6 @@
 __pycache__/
 *.py[cod]
 *$py.class
-bin/*
-include/*
 
 # C extensions
 *.so
@@ -106,5 +104,12 @@ venv.bak/
 # mypy
 .mypy_cache/
 
+# vscode
 .vscode/*
+
+# python virtualenv
+bin/
+include/
+
+# pip
 pip-selfcheck.json
