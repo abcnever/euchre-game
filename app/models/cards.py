@@ -1,4 +1,4 @@
-from . import db
+from app import db
 from .columns.suit import Suit
 from .columns.card_name import CardName
 

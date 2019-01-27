@@ -1,4 +1,4 @@
-from . import db
+from app import db
 
 class UserTeamJoin(db.Model):
     id = db.Column(db.Integer, nullable=False, primary_key=True)
