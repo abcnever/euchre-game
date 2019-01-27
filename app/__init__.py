@@ -37,7 +37,10 @@ def scan_models():
 app = Flask(__name__)
 CORS(app)  # needed for cross-domain requests, allow everything by default
 
-app.config["SQLALCHEMY_DATABASE_URI"] = os.environ["DATABASE_URL"]
+if os.environ.get("DATABASE_URL"):
+    app.config["SQLALCHEMY_DATABASE_URI"] = os.environ["DATABASE_URL"]
+else:
+    app.config["SQLALCHEMY_DATABASE_URI"] = "postgres://euchre:euchre@localhost:5432/euchre"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 app.config["SECRET_KEY"] = "gjr39dkjn344_!67#"
 
